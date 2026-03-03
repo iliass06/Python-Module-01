@@ -1,29 +1,25 @@
 class Plant:
-    def __init__(self, name, height, plant_age):
+    def __init__(self, name: str, height: int, plant_age: int) -> None:
         self.name = name
         self.height = height
         self.plant_age = plant_age
 
-    def grow(self):
+    def grow(self) -> None:
         self.height += 6
-        
-    def age(self):
+
+    def age(self) -> None:
         self.plant_age += 6
 
-    def get_info(self):
+    def get_info(self) -> None:
         print(f"{self.name}: {self.height}cm, {self.plant_age} days old")
 
 
-def ft_plant_growth():
+if __name__ == "__main__":
     p = Plant("Rose", 25, 30)
-    print(f"=== Day 1 ===")
+    print("=== Day 1 ===")
     p.get_info()
-    print(f"=== Day 7 ===")
+    print("=== Day 7 ===")
     p.grow()
     p.age()
     p.get_info()
-    print(f"Growth this week: +6cm")
-
-
-if __name__ == "__main__":
-    ft_plant_growth()
+    print("Growth this week: +6cm")
